@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tech Quiz Generator</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        button {
+            display: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script type="text/babel">
+    // Add your React code here
+    const App = () => {
+        const [questions, setQuestions] = React.useState([]);
+        const [currentQuestion, setCurrentQuestion] = React.useState(0);
+        const [score, setScore] = React.useState(0);
+
+        React.useEffect(() => {
+            // Generate questions using Hugging Face Inference API
+            generateQuestions();
+        }, []);
+
+        const generateQuestions = async () => {
+            try {
+                const prompt = 'Generate a tech quiz question about:';
+                const n = 5; // Generate 5 questions
+
+                const response = await axios.post(
+                    'https://api-inference.huggingface.co/models/t5-base',
+                    {
+                        inputs: prompt,
+                        parameters: {
+                            max_tokens: 100,
+                            num_return_sequences: n,
+                        },
+                    }
+                );
+
+                const generatedQuestions = response.data.map(result => result.generated_text.trim());
+                setQuestions(generatedQuestions.map(question => ({ question, correctAnswer: 0, options: ["Option A", "Option B", "Option C", "Option D"] })));
+            } catch (error) {
+                console.error('Error generating questions:', error.message);
+            }
+        };
+
+        const handleOptionChange = () => {
+            document.querySelector('button').style.display = 'block';
+        };
+
+        const handleNextQuestion = () => {
+            const selectedOption = document.querySelector('input[name="option"]:checked');
+            if (selectedOption) {
+                const userAnswer = Number(selectedOption.value);
+                if (userAnswer === questions[currentQuestion].correctAnswer) {
+                    setScore(score + 1);
+                }
+                setCurrentQuestion(currentQuestion + 1);
+                document.querySelector('button').style.display = 'none';
+            }
+        };
+
+        const displayResult = () => {
+            return <h2>Your Score: {score} out of {questions.length}</h2>;
+        };
+
+        const renderOptions = () => {
+            const currentQuiz = questions[currentQuestion];
+            return (
+                <div className="options">
+                    {currentQuiz.options.map((option, index) => (
+                        <div key={index}>
+                            <input type="radio" name="option" value={index} onChange={handleOptionChange} /> {option}
+                        </div>
+                    ))}
+                </div>
+            );
+        };
+
+        const renderQuiz = () => {
+            const currentQuiz = questions[currentQuestion];
+            return (
+                <div className="quiz-container">
+                    <h1>Tech Quiz</h1>
+                    <div className="question">{currentQuiz.question}</div>
+                    {renderOptions()}
+                    <button onClick={handleNextQuestion}>Next</button>
+                </div>
+            );
+        };
+
+        return (
+            <div>
+                {questions.length > 0 && currentQuestion < questions.length ? renderQuiz() : displayResult()}
+            </div>
+        );
+    };
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+</script>
+
+</body>
+</html>

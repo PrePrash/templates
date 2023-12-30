@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Quiz</title>
+</head>
+<body>
+    <h2>Generated Quiz</h2>
+    <p><strong>Passage:</strong></p>
+    <p>{{ passage }}</p>
+    <p><strong>Questions:</strong></p>
+    <ul>
+        {% for question in questions %}
+            <li>{{ question['question'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

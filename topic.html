@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: paleturquoise;
+          background-image: url('topic.jpg');
+          background-size: cover;
+          
+      }
+      h1{
+        color:wheat;
+      }
+      </style>
+  </head>
+  <body>
+
+
+    <div class="container12">
+      <h1>Topics</h1>
+      <button onclick="goToC() " id="submit" class="button12">C</button>
+      <button onclick="goToCC() "id="submit" class="button12">C++</button>
+      <button onclick="goTojava() " id="submit" class="button12">java</button>
+      <button onclick="goTopython() "id="submit" class="button12">python</button>
+      
+    </div>
+    <script>
+        // JavaScript function to navigate to another page
+        function goToC() {
+            // Change "anotherpage.html" to the actual URL of the page you want to navigate to
+            window.location.href = "c.html";
+        }
+        function goToCC() {
+            // Change "anotherpage.html" to the actual URL of the page you want to navigate to
+            window.location.href = "c++.html";
+        }
+        function goTojava() {
+            // Change "anotherpage.html" to the actual URL of the page you want to navigate to
+            window.location.href = "java.html";
+        }
+        function goTopython() {
+            // Change "anotherpage.html" to the actual URL of the page you want to navigate to
+            window.location.href = "python.html";
+        }
+        
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page with Navigation Bar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: paleturquoise;
+            background-image: url(quiz.jpg);
+            background-size: cover;
+            
+        }
+
+        header {
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .container {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            border-radius: 8px;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color:white;
+        }
+        label{
+            color: aqua;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #65dc69;
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz generator</h1>
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="#">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" onclick="performLogin()"><a class="a" href="topic.html">Login</a></button>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function performLogin() {
+        console.log("here");
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Example: Simple validation for demonstration purposes
+            if (username =='Vishal' && password =='1234') {
+                console.log(password);
+                // Successful login, redirect to the welcome page  
+            } else {
+                // Display an error message (you can customize this part)
+                alert('Invalid username or password. Please try again.');
+            }
+        }
+</script>
+</html>

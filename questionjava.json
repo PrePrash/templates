@@ -1,0 +1,102 @@
+[
+    {
+        "question": "Which of the following is the correct way to declare a variable in Java?",
+        "options": ["int x;", "x = 5;", "variable x;", "declare x;"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the main purpose of the 'public static void main(String[] args)' method in Java?",
+        "options": ["To declare a public variable", "To define the main class", "To execute the Java program", "To initialize the Java Virtual Machine (JVM)"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "In Java, how do you create a new instance of a class?",
+        "options": ["MyClass object = new MyClass();", "create MyClass object;", "MyClass.create();", "new MyClass object;"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which data type is used for storing a single character in Java?",
+        "options": ["char", "Character", "string", "chr"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the correct way to comment a single-line comment in Java?",
+        "options": ["// This is a comment", "/* This is a comment */", "# This is a comment", "''' This is a comment '''"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which keyword is used for inheritance in Java?",
+        "options": ["inherit", "extends", "derive", "inheritance"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the purpose of the 'super' keyword in Java?",
+        "options": ["To call the superclass method", "To create a new object", "To specify a super class", "To declare a constant variable"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which collection class is synchronized in Java?",
+        "options": ["ArrayList", "LinkedList", "Vector", "HashMap"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "What is the output of the following code: 'System.out.println(\"Hello, World!\");'?",
+        "options": ["Hello, World!", "Error", "Prints nothing", "Depends on the compiler"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which loop is used to iterate over a collection in Java?",
+        "options": ["for", "while", "do-while", "foreach"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "Which keyword is used to define a constant in Java?",
+        "options": ["constant", "final", "const", "immutable"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the purpose of the 'interface' keyword in Java?",
+        "options": ["To declare a class", "To define a method", "To create an interface", "To implement a class"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "How do you declare an array in Java?",
+        "options": ["int array[];", "array[] = new int[];", "int[] array;", "create array[];"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "What is the difference between '=='' and '.equals()' in Java?",
+        "options": ["They are the same", "'==' compares object references, '.equals()' compares object contents", "'==' compares object contents, '.equals()' compares object references", "None of the above"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "Which exception is thrown by the 'parseInt()' method in Java?",
+        "options": ["NumberFormatException", "SyntaxException", "IntegerException", "ParseError"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the correct syntax for a multi-line comment in Java?",
+        "options": ["// This is a comment", "/* This is a comment */", "# This is a comment", "''' This is a comment '''"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "Which access modifier is used for class members that should be accessible only within the same package in Java?",
+        "options": ["private", "protected", "default (package-private)", "public"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "In Java, what is the purpose of the 'break' statement?",
+        "options": ["Terminate the program", "Exit the loop or switch statement", "Skip the current iteration", "Print a message"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "Which class is the superclass for all exceptions in Java?",
+        "options": ["Exception", "RuntimeException", "Error", "Throwable"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "What is the purpose of the 'this' keyword in Java?",
+        "options": ["To refer to the current instance of a class", "To declare a constant variable", "To represent a null pointer", "To access private class members"],
+        "correctAnswer": 0
+    }
+]

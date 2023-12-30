@@ -1,0 +1,102 @@
+[
+    {
+        "question": "What is the correct syntax for declaring a class in C++?",
+        "options": ["class MyClass { }", "define MyClass { }", "new MyClass { }", "structure MyClass { }"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "How do you create an object of a class in C++?",
+        "options": ["MyClass object;", "object = new MyClass;", "MyClass.create();", "new object = MyClass;"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the purpose of the 'this' pointer in C++?",
+        "options": ["To refer to the current instance of a class", "To declare a constant variable", "To represent a null pointer", "To access private class members"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "How do you perform dynamic memory allocation for an array in C++?",
+        "options": ["alloc()", "array.allocate()", "new[]", "malloc()"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "What is the output of the following code: 'cout << 5 / 2;'?",
+        "options": ["2", "2.5", "5", "Error"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which keyword is used for inheritance in C++?",
+        "options": ["derive", "inherit", "extends", "public"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "What is the purpose of the 'virtual' keyword in C++?",
+        "options": ["To define a virtual function", "To declare a constant variable", "To create an abstract class", "To declare a static function"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "How is exception handling implemented in C++?",
+        "options": ["try-except", "catch-throw", "throw-catch", "try-catch"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "What is the standard input/output stream in C++?",
+        "options": ["cin/cout", "scan/print", "input/output", "read/write"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What does the 'const' keyword mean in a member function declaration in C++?",
+        "options": ["The function is constant and cannot modify any member variables", "The function cannot be called", "The function is declared in a constant class", "The function cannot be inherited"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the correct way to initialize a member variable 'count' in a C++ class constructor?",
+        "options": ["count = 0;", "count : 0;", "this->count = 0;", "initialize count = 0;"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "Which type of inheritance is not supported in C++?",
+        "options": ["Single Inheritance", "Multiple Inheritance", "Multilevel Inheritance", "Hierarchical Inheritance"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the purpose of the 'inline' keyword in C++?",
+        "options": ["To declare a function", "To specify an inline comment", "To define a macro", "To suggest the compiler to inline the function"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "Which standard library header file is used for input and output operations in C++?",
+        "options": ["iostream.h", "inputoutput.h", "stdio.h", "iostream"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "What is the scope resolution operator in C++?",
+        "options": [":", "::", ".", "->"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the purpose of the 'new' operator in C++?",
+        "options": ["To allocate memory for an array", "To create a new instance of a class", "To delete a variable", "To perform mathematical operations"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "How do you define a constant member function in C++?",
+        "options": ["const functionName();", "functionName() const;", "const void functionName();", "void const functionName();"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the output of the following code: 'cout << sizeof(int);'?",
+        "options": ["4", "8", "2", "Depends on the compiler"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is a template in C++?",
+        "options": ["A generic class or function", "A predefined data type", "A constant value", "A special keyword"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "In C++, what is the purpose of the 'friend' keyword?",
+        "options": ["To declare a function as a friend", "To specify a function as a class member", "To define a new class", "To indicate a static function"],
+        "correctAnswer": 0
+    }
+]

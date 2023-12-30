@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(python.jpg);
+            margin: 20px;
+        }
+        .quiz-container {
+            background-color: rgba(0,0,0, 0.4);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 50px 50px 50px 50px;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        button {
+            display: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script type="text/babel">
+    const App = () => {
+        const [questions, setQuestions] = React.useState([]);
+        const [currentQuestion, setCurrentQuestion] = React.useState(0);
+        const [score, setScore] = React.useState(0);
+
+        React.useEffect(() => {
+            // Load questions from JSON file
+            axios.get('questionpython.json')
+                .then(response => {
+                    const shuffledQuestions = shuffleArray(response.data);
+                    setQuestions(shuffledQuestions.slice(0, 10)); // Selecting 10 random questions
+                })
+                .catch(error => console.error('Error loading questions:', error));
+        }, []);
+
+        const shuffleArray = (array) => {
+            const shuffledArray = [...array];
+            for (let i = shuffledArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+            }
+            return shuffledArray;
+        };
+
+        const handleOptionChange = () => {
+            document.querySelector('button').style.display = 'block';
+        };
+
+        const handleNextQuestion = () => {
+            const selectedOption = document.querySelector('input[name="option"]:checked');
+            if (selectedOption) {
+                const userAnswer = Number(selectedOption.value);
+                if (userAnswer === questions[currentQuestion].correctAnswer) {
+                    setScore(score + 1);
+                }
+                setCurrentQuestion(currentQuestion + 1);
+                document.querySelector('button').style.display = 'none';
+            }
+        };
+
+        const displayResult = () => {
+            return <h2>Your Score: {score} out of {questions.length}</h2>;
+        };
+
+        const renderOptions = () => {
+            const currentQuiz = questions[currentQuestion];
+            return (
+                <div className="options">
+                    {currentQuiz.options.map((option, index) => (
+                        <div key={index}>
+                            <input type="radio" name="option" value={index} onChange={handleOptionChange} /> {option}
+                        </div>
+                    ))}
+                </div>
+            );
+        };
+
+        const renderQuiz = () => {
+            const currentQuiz = questions[currentQuestion];
+            return (
+                <div className="quiz-container">
+                    <h1>C Quiz</h1>
+                    <div className="question">{currentQuiz.question}</div>
+                    {renderOptions()}
+                    <button onClick={handleNextQuestion}>Next</button>
+                </div>
+            );
+        };
+
+        return (
+            <div>
+                {questions.length > 0 && currentQuestion < questions.length ? renderQuiz() : displayResult()}
+            </div>
+        );
+    };
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+</script>
+
+</body>
+</html>

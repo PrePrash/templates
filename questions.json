@@ -1,0 +1,103 @@
+[
+    {
+      "question": "What does 'printf' stand for in C?",
+      "options": ["Print Format", "Print Function", "Program Format", "Program Function"],
+      "correctAnswer": 1
+    },
+    {
+        "question": "What is the size of 'int' in C?",
+        "options": ["2 bytes", "4 bytes", "8 bytes", "Depends on the machine"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "Which of the following is a header file in C?",
+        "options": ["stdio.h", "main.h", "program.h", "stdlib.h"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the result of 'sizeof(char)' in C?",
+        "options": ["1 byte", "2 bytes", "Depends on the machine", "Cannot be determined"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the purpose of 'scanf' function in C?",
+        "options": ["Prints formatted output", "Reads formatted input", "Allocates memory", "Converts string to number"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the extension of a C source file?",
+        "options": [".c", ".h", ".cpp", ".exe"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which keyword is used to define a macro in C?",
+        "options": ["macro", "define", "def", "macrodef"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "In C, what is the purpose of the 'break' statement?",
+        "options": ["Terminate the program", "Exit the loop or switch statement", "Skip the current iteration", "Print a message"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "What is the output of the following code: 'printf('%d', 5 / 2)'?",
+        "options": ["2", "2.5", "5", "Error"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which operator is used to access the value pointed to by a pointer in C?",
+        "options": ["&", "*", "->", "."],
+        "correctAnswer": 2
+    },
+    {
+        "question": "What is the syntax for declaring a structure in C?",
+        "options": ["struct MyStruct { }", "structure MyStruct { }", "define MyStruct { }", "new MyStruct { }"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "How do you allocate dynamic memory in C?",
+        "options": ["malloc()", "allocate()", "new()", "memalloc()"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which function is used to compare two strings in C?",
+        "options": ["strcmp()", "strcompare()", "compare()", "stringcmp()"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the purpose of the 'volatile' keyword in C?",
+        "options": ["To indicate that a variable may be changed by an external entity", "To declare a constant variable", "To prevent a variable from being modified", "To specify a variable as global"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the role of the 'typedef' keyword in C?",
+        "options": ["To define a new type", "To declare a variable", "To include a header file", "To create a function prototype"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "In C, how do you include a preprocessor directive?",
+        "options": ["<preprocessor>", "#include", "preprocessor", "@include"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What does the 'sizeof' operator return in C?",
+        "options": ["Size of the variable", "Size of the data type", "Memory address of the variable", "Number of elements in an array"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the purpose of the 'const' keyword in C?",
+        "options": ["To declare a variable as constant", "To create a constant function", "To define a constant expression", "To include a constant library"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which header file is used for input and output functions in C?",
+        "options": ["inputoutput.h", "stdio.h", "io.h", "iostream.h"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the result of the following expression: '5 << 2'?",
+        "options": ["20", "10", "40", "5"],
+        "correctAnswer": 2
+    }
+  ]
+  

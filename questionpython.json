@@ -1,0 +1,103 @@
+[
+    {
+        "question": "Which of the following is the correct way to declare a variable in Python?",
+        "options": ["var x", "x = 5", "variable x", "x := 5"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the primary purpose of the 'if' statement in Python?",
+        "options": ["To declare a variable", "To define a function", "To execute a block of code conditionally", "To create a loop"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "In Python, how do you print 'Hello, World!' to the console?",
+        "options": ["echo 'Hello, World!'", "print('Hello, World!')", "console.log('Hello, World!')", "System.out.println('Hello, World!')"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "Which data type is used for a collection of elements in Python?",
+        "options": ["list", "array", "set", "collection"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the correct way to comment a single-line comment in Python?",
+        "options": ["// This is a comment", "/* This is a comment */", "# This is a comment", "''' This is a comment '''"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "Which loop is used to iterate over a sequence in Python?",
+        "options": ["for", "while", "do-while", "foreach"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "How do you declare and initialize an empty list in Python?",
+        "options": ["list = []", "list = {}", "list = new List()", "list = None"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the purpose of the 'def' keyword in Python?",
+        "options": ["To define a variable", "To declare a function", "To create a class", "To import a module"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "In Python, how do you read user input from the console?",
+        "options": ["read_input()", "getInput()", "input()", "scan()"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "Which library is commonly used for working with regular expressions in Python?",
+        "options": ["regex", "relib", "regexp", "re"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "What is the correct way to check if a key exists in a Python dictionary?",
+        "options": ["if key in dictionary:", "if dictionary.hasKey(key):", "if dictionary.contains(key):", "if key.exists():"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which of the following is used for handling exceptions in Python?",
+        "options": ["try-catch", "except-throw", "catch-throw", "try-except"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "What does the 'len()' function do in Python?",
+        "options": ["Returns the length of a string", "Returns the number of elements in a list", "Returns the size of a file", "Returns the current time"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "How do you open a file named 'example.txt' in read mode in Python?",
+        "options": ["file = open('example.txt', 'r')", "file = read('example.txt')", "file = openFile('example.txt', 'read')", "file = read('example.txt', 'r')"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the purpose of the 'strip()' method in Python?",
+        "options": ["To remove leading and trailing spaces from a string", "To split a string into a list", "To concatenate two strings", "To reverse a string"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "In Python, what is the purpose of the 'self' keyword in a class?",
+        "options": ["To reference the current instance of the class", "To declare a constant variable", "To create a static method", "To represent a null pointer"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "Which of the following is a valid way to create a tuple in Python?",
+        "options": ["tuple = [1, 2, 3]", "tuple = (1, 2, 3)", "tuple = {1, 2, 3}", "tuple = 1, 2, 3"],
+        "correctAnswer": 1
+    },
+    {
+        "question": "What is the output of the following code: 'print(' '.join(['Hello', 'World']))'?",
+        "options": ["HelloWorld", "Hello World", "Hello, World", "['Hello', 'World']"],
+        "correctAnswer": 2
+    },
+    {
+        "question": "How do you define a function with a default parameter value in Python?",
+        "options": ["def my_function(param1, param2=10):", "def my_function(param1=10, param2):", "def my_function(param1, param2=10):", "def my_function(param1=10, param2=20):"],
+        "correctAnswer": 0
+    },
+    {
+        "question": "What is the purpose of the 'lambda' keyword in Python?",
+        "options": ["To create anonymous functions", "To define a constant variable", "To declare a class", "To include a library"],
+        "correctAnswer": 0
+    }
+
+]
